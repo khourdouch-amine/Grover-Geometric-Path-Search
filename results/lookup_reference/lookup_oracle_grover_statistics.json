@@ -1,0 +1,155 @@
+{
+  "experiment": "G3 ideal Grover reference using a lookup-table phase oracle",
+  "created_utc": "2026-11-22T21:07:28.299409+00:00",
+  "classification": "REFERENCE_MODEL_NOT_GEOMETRIC_G3_SIMULATION",
+  "scenario": {
+    "name": "G3_4x4_L6",
+    "grid": [
+      4,
+      4
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      3,
+      3
+    ],
+    "obstacles": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "route_length": 6,
+    "search_space": 4096,
+    "valid_routes": 7,
+    "valid_indices": [
+      63,
+      207,
+      243,
+      783,
+      819,
+      3087,
+      3123
+    ]
+  },
+  "circuit": {
+    "oracle": "lookup_phase_oracle.py",
+    "search_qubits": 12,
+    "phase_qubits": 1,
+    "total_qubits": 13,
+    "grover_iterations": 18,
+    "simulator": "Qiskit Aer statevector",
+    "shots_per_run": 100,
+    "repetitions": 30,
+    "transpiler_optimization_level": 0,
+    "transpiler_seed": 42,
+    "simulator_seeds": [
+      4200,
+      4201,
+      4202,
+      4203,
+      4204,
+      4205,
+      4206,
+      4207,
+      4208,
+      4209,
+      4210,
+      4211,
+      4212,
+      4213,
+      4214,
+      4215,
+      4216,
+      4217,
+      4218,
+      4219,
+      4220,
+      4221,
+      4222,
+      4223,
+      4224,
+      4225,
+      4226,
+      4227,
+      4228,
+      4229
+    ],
+    "qiskit_version": "2.6.2",
+    "qiskit_aer_version": "0.18.4"
+  },
+  "statistical_results": {
+    "total_shots": 3000,
+    "successes": 2994,
+    "failures": 6,
+    "observed_success_rate": 0.998,
+    "wilson_confidence_level": 0.95,
+    "wilson_interval": [
+      0.995643,
+      0.999083
+    ],
+    "per_repetition_successes": [
+      99,
+      100,
+      99,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      99,
+      100,
+      99,
+      100,
+      100,
+      100,
+      99,
+      100,
+      100,
+      99,
+      100,
+      100,
+      100,
+      100
+    ],
+    "per_repetition_shots": 100
+  },
+  "exact_reference": {
+    "statevector_success_probability": 0.99833747779873,
+    "theoretical_success_probability": 0.99833747779873,
+    "absolute_difference": 2.295e-13,
+    "state_normalization": 1.0,
+    "valid_probability": 0.99833747779873,
+    "invalid_probability": 0.00166252220104
+  },
+  "validation": {
+    "oracle_basis_cases_passed": 12,
+    "oracle_basis_cases_tested": 12,
+    "statevector_matches_theory": true,
+    "state_normalized": true,
+    "probability_partition_valid": true,
+    "statistical_rate_compatible_with_exact_reference": true
+  },
+  "limitations": [
+    "This experiment uses a lookup-table phase oracle, not the 26-qubit geometric oracle.",
+    "It validates ideal Grover amplitude amplification for the seven known valid indices.",
+    "It does not demonstrate successful execution of the full geometric G3 circuit.",
+    "The full geometric G3 Aer MPS simulation remains blocked by the previously measured memory requirement.",
+    "No quantum hardware or quantum advantage is claimed."
+  ]
+}

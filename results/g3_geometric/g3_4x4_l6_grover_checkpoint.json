@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "scenario": "G3_4x4_L6",
+    "shots_per_run": 32,
+    "max_bond_dimension": 128,
+    "grover_repetitions": 1,
+    "base_seed": 4200,
+    "transpiler_seed": 42,
+    "expected_indices": [
+      63,
+      207,
+      243,
+      783,
+      819,
+      3087,
+      3123
+    ],
+    "simulator_options": {
+      "max_memory_mb": 7000,
+      "mps_omp_threads": 1,
+      "matrix_product_state_truncation_threshold": 1e-16,
+      "matrix_product_state_max_bond_dimension": 128
+    }
+  },
+  "transpilation": {
+    "transpilation_time_s": 7.869980519999444,
+    "transpiled_depth": 83588,
+    "transpiled_operations": 104296
+  },
+  "runs": []
+}
